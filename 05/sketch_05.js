@@ -1,12 +1,9 @@
 var x = 0;
 var y = 0;
-var w = 50;
+var w = 0;
 
 var a = 0;
 var b = 0;
-
-var x2 = 0;
-var y2 = 0;
 
 var xE = 0;
 var yE = 0;
@@ -22,6 +19,9 @@ var b2 = 61;
 var m1 = 232;
 var m2 = 34;
 var m3 = 61;
+
+//direccion
+var f = 0;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -74,12 +74,8 @@ function draw() {
   m2 = m2 - 2
   m3 = m3 - 4
   }
-  
-  //puntuacion
-  
-  
-  
-  
+
+ 
   
  //ms pacman xy
     if( x > windowWidth){
@@ -95,12 +91,11 @@ function draw() {
     y = windowHeight
     }
     
-    
-    
   if ( keyIsPressed === true ) {
 
     if (keyCode === RIGHT_ARROW) {
       x = x + 5;
+      f = 0
     }
     if (keyCode === LEFT_ARROW) {
       x = x - 5;
@@ -115,7 +110,7 @@ function draw() {
       x = windowWidth / 2 ; 
       y = windowHeight / 2 ;
     }
-  }
+ 
   
   //pacman ab
   
@@ -132,8 +127,6 @@ function draw() {
     b = windowHeight
     }
  
- if ( keyIsPressed === true ) {
-
     if (keyCode === 68) {
       a = a + 5;
     }
