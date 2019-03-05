@@ -31,7 +31,7 @@ function setup() {
 }
 
 function draw() {
-  background(0,0,220);
+  background(0);
   // MSPAcman x y
   fill(r1,g1,b1);
   ellipse(x, y, 50, 50);
