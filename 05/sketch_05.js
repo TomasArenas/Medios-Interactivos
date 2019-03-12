@@ -24,14 +24,24 @@ var m3 = 61;
 var f = 0;
 
 function setup() {
+  
+ 
+  
+  
   createCanvas(windowWidth, windowHeight);
   xE = random(0,width);
   yE = random(0,height);
   noStroke();
-}
 
+}
+ 
+
+ 
 function draw() {
   background(0);
+  
+ 
+  
   // MSPAcman x y
   fill(r1,g1,b1);
   ellipse(x, y, 50, 50);
@@ -75,11 +85,13 @@ function draw() {
   m3 = m3 - 4
   }
 
- 
+
   
  //ms pacman xy
+
     if( x > windowWidth){
     x = 0
+    
     }
     if( x < -1){
     x = windowWidth
@@ -91,6 +103,22 @@ function draw() {
     y = windowHeight
     }
     
+     if(f = 0){
+    x = x + 1
+    }
+ 
+      if(f = 1){
+     x = x - 1
+     }
+    
+     if(g = 0){
+    y = y + 1
+    }
+ 
+      if(g = 1){
+     y = y - 1
+     }
+    
   if ( keyIsPressed === true ) {
 
     if (keyCode === RIGHT_ARROW) {
@@ -99,22 +127,25 @@ function draw() {
     }
     if (keyCode === LEFT_ARROW) {
       x = x - 5;
+      f = 1
     }
     if (keyCode === UP_ARROW) {
       y = y - 5;
+      g = 0
     }
     if (keyCode === DOWN_ARROW) {
       y = y + 5;
+      g = 1
     }
     if (key == ' ') {
       x = windowWidth / 2 ; 
       y = windowHeight / 2 ;
     }
  
-  
   //pacman ab
   
    if( a > windowWidth){
+     
     a = 0
     }
     if( a< -1){
@@ -126,18 +157,39 @@ function draw() {
     if( b< -1){
     b = windowHeight
     }
+
+ if(g = 0){
+    a = a + 1
+    }
  
+      if(g = 1){
+     a = a - 1
+     }
+    
+     if(h = 0){
+    b = b + 1
+    }
+ 
+      if(h = 1){
+     b = b - 1
+     }
+
+
     if (keyCode === 68) {
       a = a + 5;
+      g = 0
     }
     if (keyCode === 65) {
       a = a - 5;
+g = 1
     }
     if (keyCode === 87) {
       b = b - 5;
+h = 0
     }
     if (keyCode === 83) {
       b = b + 5;
+     h = 1 
     }
     if (key == ' ') {
       x = windowWidth / 2 ; 
