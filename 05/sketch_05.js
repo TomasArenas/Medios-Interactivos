@@ -104,21 +104,17 @@ function draw() {
     }
     
      if(f = 0){
-    x = x + 1
-    }
- 
-      if(f = 1){
-     x = x - 1
+      x = x + 3
      }
-    
-     if(g = 0){
-    y = y + 1
-    }
- 
-      if(g = 1){
-     y = y - 1
+     else if (f = 1){
+    x = x - 3
      }
-    
+    else if (f = 2){
+    y = y + 3
+     }else if (f = 3){
+    y = y - 3
+     }
+     
   if ( keyIsPressed === true ) {
 
     if (keyCode === RIGHT_ARROW) {
@@ -131,11 +127,11 @@ function draw() {
     }
     if (keyCode === UP_ARROW) {
       y = y - 5;
-      g = 0
+      f = 2
     }
     if (keyCode === DOWN_ARROW) {
       y = y + 5;
-      g = 1
+      f = 3
     }
     if (key == ' ') {
       x = windowWidth / 2 ; 
@@ -159,25 +155,20 @@ function draw() {
     }
 
  if(g = 0){
-    a = a + 1
-    }
- 
-      if(g = 1){
-     a = a - 1
+      a = a + 3
      }
-    
-     if(h = 0){
-    b = b + 1
-    }
- 
-      if(h = 1){
-     b = b - 1
+     else if (g = 1){
+    a = a - 3
      }
-
+    else if (f = 2){
+     b = b + 3
+     }else if (f = 3){
+     b = b - 3
+     }
 
     if (keyCode === 68) {
       a = a + 5;
-      g = 0
+    g = 0
     }
     if (keyCode === 65) {
       a = a - 5;
@@ -185,11 +176,11 @@ g = 1
     }
     if (keyCode === 87) {
       b = b - 5;
-h = 0
+g = 2
     }
     if (keyCode === 83) {
       b = b + 5;
-     h = 1 
+    g = 3
     }
     if (key == ' ') {
       x = windowWidth / 2 ; 
