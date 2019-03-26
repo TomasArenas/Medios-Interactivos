@@ -19,12 +19,14 @@ var F = [];
 var G = [];
 var H = [];
 
+var cant = 2;
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   
   
-    for (var i = 0; i < 1; i = i +1){
+    for (var i = 0; i < cant; i = i +1){
      A[i] = random(width);
      B[i] = random(height);
 
@@ -46,7 +48,7 @@ function draw() {
   background(220);
   noStroke();
  
-   for (var i = 0; i < 1; i = i +1){
+   for (var i = 0; i < cant; i = i +1){
   
   //conejo
   fill(255);
@@ -78,7 +80,8 @@ function draw() {
      
      B[i] = B[i] - random(-1,1);
     
-   
+     
+    
 //mico
 
   fill(127,55,0);
@@ -111,6 +114,7 @@ function draw() {
      
      D[i] = D[i] - random(5,0);
      
+   
      //buho
   
  fill(66,29,0);
