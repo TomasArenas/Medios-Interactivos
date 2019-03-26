@@ -107,9 +107,9 @@ function draw() {
   fill(255,48,43);
   rect(C[i]+23,D[i]+10,5,5);
   
-     C[i] = C[i] - random(5,-5);
+     C[i] = C[i] - random(5,0);
      
-     D[i] = D[i] - random(-5,5);
+     D[i] = D[i] - random(5,0);
      
      //buho
   
