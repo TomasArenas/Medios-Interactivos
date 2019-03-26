@@ -21,7 +21,7 @@ var H = [];
 
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight);
   
   
     for (var i = 0; i < 1; i = i +1){
