@@ -131,9 +131,9 @@ function draw() {
   fill(255,197,0);
   triangle(E[i]-5,F[i]+5,E[i]+5,F[i]+5,E[i],F[i]+15);
      
-       E[i] = E[i] - random(1,-10);
+       E[i] = E[i] - random(0,0);
      
-     F[i] = F[i] - random(-10,1);
+     F[i] = F[i] - random(-3,1);
      
      //CERDO
      
@@ -152,9 +152,9 @@ function draw() {
      ellipse(G[i]+3,H[i]+8,5,5);
   
      
-      G[i] = G[i] - random(10,-1);
+      G[i] = G[i] - random(1,-3);
      
-     H[i] = H[i] - random(-1,10);
+     H[i] = H[i] - random(0,0);
      
      
    }  
