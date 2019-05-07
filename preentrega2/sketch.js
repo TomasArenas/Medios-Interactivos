@@ -46,17 +46,17 @@ function setup() {
 
 
 function draw() {
-  //background(50, 50, 50);
+  background(50, 50, 50);
   //imprime los valores de rotacion en X y en Y
   
 //inicia una figura
 beginShape();
 
 //recorre todos los puntos en los que se esta tocando la pantalla
-for (var i = 0; i < touches.length; i++) {
+for (var j = 0; j < touches.length; j++) {
 
     //en las coordenadas de cada punto crea un vertice
-    vertex(touches[i].x, touches[i].y);
+    image(vivo,touches[j].x, touches[j].y);
 
 }
 
@@ -83,7 +83,7 @@ endShape(CLOSE);
     var posX2 = (numFilas2 - a) * (ancho2);
     var posY2 = height - alto2;
 
-    if (rotationY > 60 && rotationX < 20) {
+    if (rotationY < 20 && rotationX < 80) {
       fill(255);
       rect(posX2, posY2, ancho2 - 1, alto2 - 1);
       
@@ -112,7 +112,7 @@ endShape(CLOSE);
     var posX = (numFilas - i) * (ancho);
     var posY = height - alto;
 
-    //if(rotationY > 60 && rotationX < 20){
+    if(rotationY > 60 && rotationX < 20){
     image(vivo, 0, 0, height / 4, width / 4);
     
     fill(0);
@@ -121,10 +121,10 @@ endShape(CLOSE);
     image(coravivo, posX, posY,ancho - 1, alto - 1);
     
     fill(255);
-    text(ano, posX, posY);
+    text(ano, posX+50, posY);
     
     
-    //}
+    }
 
   }
 
@@ -139,7 +139,7 @@ endShape(CLOSE);
     var posX3 = (numFilas - u) * (ancho3);
     //inicio desde abajo
     //var posY3 = height - alto3;
-    if (rotationY > 60 && rotationX < 20) {
+    if (rotationY < -60 && rotationX > 20) {
       fill(255);
       rect(posX3, 0, ancho3 - 1, alto3 - 1);
 
