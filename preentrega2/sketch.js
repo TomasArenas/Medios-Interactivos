@@ -49,7 +49,19 @@ function draw() {
   //background(50, 50, 50);
   //imprime los valores de rotacion en X y en Y
   
- image(isaac,touches.x, touches.y);
+//inicia una figura
+beginShape();
+
+//recorre todos los puntos en los que se esta tocando la pantalla
+for (var i = 0; i < touches.length; i++) {
+
+    //en las coordenadas de cada punto crea un vertice
+    vertex(touches[i].x, touches[i].y);
+
+}
+
+//cierra la figura
+endShape(CLOSE);
   
   noStroke();
   fill(255);
