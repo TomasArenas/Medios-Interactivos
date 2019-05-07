@@ -24,7 +24,7 @@ function preload() {
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-  background(50, 50, 50);
+  //background(50, 50, 50);
 
   //noStroke();
 
